@@ -1,0 +1,19 @@
+<%- include("header") -%>
+
+  <div id="paintings_display" class="container ">
+
+  </div>
+  <script type="text/javascript">
+    let paintingsData = <%- JSON.stringify(paintingsData) %>;
+    console.log(paintingsData);
+
+    paintingsData.forEach(data =>
+    {
+      let paintPath = data.painting_path;
+
+      $("#paintings_display").prepend(`<%- include("./components/painting_card") %>`);
+      console.log(paintPath);
+      $(".painting_picture").first().attr("src", paintPath);
+    });
+</script>
+<%- include("footer") -%>

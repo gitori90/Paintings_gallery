@@ -1,13 +1,14 @@
 
-// import App from "../client_side/my-app/src/components/App.js";
-// import path from 'path';
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const fs = require('fs');
+const app = express();
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
 const mongoose = require('mongoose');
 mongoose.set('useUnifiedTopology', true);
-const app = express();
+
 mongoose.connect('mongodb+srv://armage:armage1990@cluster0.8id6c.mongodb.net/paintingsDB',
 {useNewUrlParser: true});
 
@@ -18,9 +19,10 @@ const paintingDataSchema = {
 };
 const Painting = mongoose.model("Painting", paintingDataSchema);
 
-async function getData() {
-
-  var found = await Painting.find({}, function(err, items)
+async function getData()
+{
+  let itemsFound = [];
+  let found = await Painting.find({}, function(err, items)
     {
       if (err)
       {
@@ -28,30 +30,19 @@ async function getData() {
       }
       else
       {
-        console.log(items);
+        itemsFound = items;
       }
     });
+  // console.log(itemsFound);
 
-  return found;
+  // console.log(itemsFound[0]);
+  return itemsFound;
 }
-
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//   <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
 
 app.route("/")
 .get(function(req, res)
 {
-  getData();
+
 
   res.render("index");
 })
@@ -60,8 +51,18 @@ app.route("/")
 
 });
 
-app.listen(process.env.PORT || 3000, function() {});
+app.route("/gallery")
+.get(async function(req, res)
+{
+  var paintingsData = await getData();
 
-// console.log("the query object:");
-// console.log(getData());
-// console.log("------");
+  res.render("gallery", {
+    paintingsData : paintingsData
+  });
+})
+.post(function(req, res)
+{
+  res.redirect("/reservationPage");
+});
+
+app.listen(process.env.PORT || 3000, function() {});
