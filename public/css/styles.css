@@ -1,0 +1,57 @@
+#gallery_container.container {
+  margin: 0;
+}
+
+.painting_card  {
+  position: relative;
+  padding: 2rem 4rem;
+  font-family: 'Frank Ruhl Libre', serif;
+  /* height: 10rem;
+  width: 8rem; */
+}
+
+.painting_picture {
+  position: relative;
+  height: 20rem;
+  /* object-fit: cover;
+  overflow: hidden; */
+  border-radius: 1rem;
+}
+
+
+.card-img-top {
+
+}
+.painting_picture:hover {
+  opacity: 0.9;
+  cursor: zoom-in;
+  border: solid 2px #bbd196;
+}
+
+.expandModal {
+  position: fixed;
+  z-index: 5;
+  width: 300%;
+  height: 300%;
+  left: 0;
+  top: 0;
+  transition-duration: 0.8s;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.expandModal > img.painting_picture {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(35%, 5%);
+
+
+  height: 90%;
+  z-index: 5;
+  border-radius: 1rem;
+  border: solid 0.5rem #799351;
+  transition-duration: 0.4s;
+}
+.expandModal:hover {
+  opacity: 1;
+  cursor: zoom-out;
+}

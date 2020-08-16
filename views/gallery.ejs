@@ -1,19 +1,28 @@
 <%- include("header") -%>
 
-  <div id="paintings_display" class="container ">
+
+  <div id="gallery_container" class="container">
+    <div id="paintings_display" class="row">
+
+    </div>
 
   </div>
   <script type="text/javascript">
     let paintingsData = <%- JSON.stringify(paintingsData) %>;
-    console.log(paintingsData);
-
     paintingsData.forEach(data =>
     {
       let paintPath = data.painting_path;
+      let paintDescription = data.painting_description;
+      let paintKey = data.key;
 
       $("#paintings_display").prepend(`<%- include("./components/painting_card") %>`);
-      console.log(paintPath);
       $(".painting_picture").first().attr("src", paintPath);
+
+      $(".painting_frame").first().click(function () { $(this).toggleClass("expandModal"); });
+
+      $(".painting_text").first().text(paintDescription);
+      $(".paint_key").first().text(paintKey);
     });
+
 </script>
 <%- include("footer") -%>
