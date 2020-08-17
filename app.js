@@ -40,11 +40,13 @@ async function getData()
 }
 
 app.route("/")
-.get(function(req, res)
+.get(async function(req, res)
 {
+  let paintingsData = await getData();
 
-
-  res.render("index");
+  res.render("index", {
+    paintingsData : paintingsData
+  });
 })
 .post(function(req, res)
 {
@@ -54,7 +56,7 @@ app.route("/")
 app.route("/gallery")
 .get(async function(req, res)
 {
-  var paintingsData = await getData();
+  let paintingsData = await getData();
 
   res.render("gallery", {
     paintingsData : paintingsData

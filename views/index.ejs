@@ -1,3 +1,32 @@
 <%- include("header") -%>
 
+<h1 class="welcome_title">Welcome to Momo's Gallery Site!</h1>
+<hr class="white_hr">
+
+
+<div class="carousel_wrapper">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="100">
+        <img src="https://i.ibb.co/yNFkXTR/20200812-140241.jpg" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  let paintingsData = <%- JSON.stringify(paintingsData) %>;
+  paintingsData.forEach(data =>
+  {
+    let paintPath = data.painting_path;
+
+    $(".carousel-inner").append(`<div class="carousel-item" data-interval="3000"><img src="${paintPath}" class="d-block w-100" alt="..."></div>`);
+
+  });
+
+</script>
+
 <%- include("footer") -%>

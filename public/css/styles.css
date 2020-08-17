@@ -10,6 +10,50 @@ nav.navbar {
   font-size: 2rem;
 }
 
+h1 {
+  padding: 2rem 0;
+}
+
+hr.white_hr {
+  border: none;
+  border-top: dotted 1rem white;
+  padding: 1rem 0;
+  width: 80%;
+}
+
+p.copyrights {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.navbar-nav > a.nav-link {
+  color: white!important;
+  padding-left: 2rem!important;
+}
+
+/* ===== homepage ===== */
+
+.welcome_title {
+  font-family: 'David Libre', serif;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px #bfbfbf;
+}
+
+.carousel_wrapper {
+  width: 50%;
+  margin: auto;
+}
+.carousel-item > img {
+  /* width: 15rem; */
+}
+
+
+
+/* ===== gallery ===== */
+
+
+
 .painting_card  {
   position: relative;
   margin: auto;
