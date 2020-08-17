@@ -61,10 +61,6 @@ app.route("/gallery")
   res.render("gallery", {
     paintingsData : paintingsData
   });
-})
-.post(function(req, res)
-{
-  res.redirect("/reservationPage");
 });
 
 app.listen(process.env.PORT || 3000, function() {});
