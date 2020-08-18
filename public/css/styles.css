@@ -49,7 +49,7 @@ p.copyrights {
 }
 
 .carousel_wrapper {
-  width: 40%;
+  width: 60%;
   margin: auto;
 }
 
@@ -161,8 +161,11 @@ p.copyrights {
     font-size: 250%;
   }
 
+  #paintings_display {
+    padding: 0!important;
+  }
   .expandModal > img.painting_picture {
-    width: 80%!important;
+    width: 90%!important;
     height: auto!important;
   }
 
