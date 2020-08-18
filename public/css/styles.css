@@ -52,11 +52,6 @@ p.copyrights {
   width: 40%;
   margin: auto;
 }
-.carousel-item > img {
-  /* width: 15rem; */
-}
-
-
 
 /* ===== gallery ===== */
 
@@ -153,4 +148,16 @@ p.copyrights {
 .expandModal:hover {
   opacity: 1;
   cursor: zoom-out;
+}
+
+@media only screen and (max-width: 800px) {
+
+  nav.navbar {
+    font-size: 3.5rem;
+  }
+
+  .welcome_title {
+    font-size: 350%;
+  }
+
 }
