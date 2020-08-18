@@ -161,4 +161,9 @@ p.copyrights {
     font-size: 300%;
   }
 
+  .expandModal > img.painting_picture {
+    width: 95%!important;
+    max-height: 90%!important;
+  }
+
 }
