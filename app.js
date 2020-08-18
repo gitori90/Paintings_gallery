@@ -63,4 +63,11 @@ app.route("/gallery")
   });
 });
 
+app.route("/contact")
+.get(function(req, res)
+{
+  
+  res.render("contact");
+});
+
 app.listen(process.env.PORT || 3000, function() {});

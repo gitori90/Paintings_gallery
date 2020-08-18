@@ -1,13 +1,14 @@
 body {
-  background-color: #65d6c7!important;
+  background-color: #d9c6a5!important;
   background-image: url("https://www.transparenttextures.com/patterns/fake-luxury.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 nav.navbar {
-  background-color: #27d6bf;
+  background-color: #c26565;
   color: white;
   font-size: 2rem;
+  border-bottom: solid 0.5rem #f7e7bd;
 }
 
 h1 {
@@ -18,7 +19,14 @@ hr.white_hr {
   border: none;
   border-top: dotted 1rem white;
   padding: 1rem 0;
-  width: 80%;
+  width: 60%;
+}
+
+hr.warm_hr {
+  border: none;
+  border-top: dotted 0.6rem #c26565;
+  padding: 1rem 0;
+  width: 60%;
 }
 
 p.copyrights {
@@ -36,12 +44,12 @@ p.copyrights {
 .welcome_title {
   font-family: 'David Libre', serif;
   text-align: center;
-  color: white;
+  color: #d54062;
   text-shadow: 3px 3px #bfbfbf;
 }
 
 .carousel_wrapper {
-  width: 50%;
+  width: 40%;
   margin: auto;
 }
 .carousel-item > img {
@@ -52,31 +60,59 @@ p.copyrights {
 
 /* ===== gallery ===== */
 
+#gallery_container {
+  position: relative;
+  padding: 0;
+}
+
+#paintings_display {
+  position: relative;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0;
+}
 
 
 .painting_card  {
   position: relative;
-  margin: auto;
-  padding: 2rem 4rem;
+  margin: 2rem auto;
+
+  padding: 1rem;
   font-family: 'Frank Ruhl Libre', serif;
   font-size: 2rem;
-  /* height: 10rem;
-  width: 8rem; */
+
+  background-color: rgba(163, 93, 106, 0.3);
+  border: solid 0.5rem #f7e7bd;
 }
 
 .painting_frame {
   border: solid 4rem black;
-  border-image-source: url('../images/white_ornated_frame.jpg');
-  border-image-slice: 150;
+  border-image-source: url('../images/darkwood_frame3.jpg');
+  border-image-slice: 80;
 }
 
 .painting_picture {
   position: relative;
-  height: 20rem;
-  /* object-fit: cover;
-  overflow: hidden; */
-  /* border-radius: 1rem; */
+  height: 18rem;
+}
 
+.painting_text_wrapper {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid #c26565 2px;
+  padding: 0.5rem 0;
+  /* background-color: rgba(254, 244, 219, 0.7);
+  border: solid 2rem black;
+  border-image-source: url('../images/flower1_frame.jpg');
+  border-image-slice: 150; */
+}
+
+.paint_key {
+  width: 50%;
+  margin: auto;
+  padding-top: 0.3rem;
+  border-top: dashed #c26565 2px;
+  font-size: 80%;
 }
 
 .painting_picture:hover {
