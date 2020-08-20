@@ -76,6 +76,7 @@ p.copyrights {
   background-color: rgba(163, 93, 106, 0.3);
   border: solid 0.5rem #f7e7bd;
   text-align: center;
+  width: 20rem;
 }
 
 .painting_frame {
