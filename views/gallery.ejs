@@ -18,8 +18,13 @@
       let paintDescription = data.painting_description;
       let paintKey = data.key;
 
+      let numberOfFrames = 3;
+
+      let frameIndex = Math.floor(Math.random() * Math.floor(numberOfFrames)) + 1;
+
       $("#paintings_display").prepend(`<%- include("./components/painting_card") %>`);
       $(".painting_picture").first().attr("src", paintPath);
+      $(".painting_frame").first().addClass("frame" + frameIndex.toString())
 
       $(".painting_frame").first().click(function () { $(this).toggleClass("expandModal"); });
 
