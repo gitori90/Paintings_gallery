@@ -136,7 +136,7 @@ p.copyrights {
 
 .expandModal {
   position: fixed;
-  border: none;
+  border: none!important;
   z-index: 5;
   width: 300%;
   height: 300%;
