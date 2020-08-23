@@ -206,6 +206,9 @@ p.copyrights {
     height: auto!important;
   }
 
+  .contact_info {
+    width: 80%!important;
+  }
   .navbar-right {
 
   }
