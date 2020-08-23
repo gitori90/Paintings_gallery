@@ -1,7 +1,7 @@
 <%- include("header") -%>
 
   <br />
-  <h1 class="welcome_title">The Drawings Display</h1>
+  <h1 class="welcome_title">הגלריה</h1>
   <hr class="warm_hr">
 
   <div id="gallery_container" class="container-fluid">
@@ -29,7 +29,7 @@
       $(".painting_frame").first().click(function () { $(this).toggleClass("expandModal"); });
 
       $(".painting_text").first().text(paintDescription);
-      $(".paint_key").first().text("id " + paintKey);
+      $(".paint_key").first().text("מזהה: " + paintKey);
     });
 
 </script>

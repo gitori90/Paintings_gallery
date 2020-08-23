@@ -37,6 +37,20 @@ p.copyrights {
 .navbar-nav > a.nav-link {
   color: white!important;
   padding-left: 2rem!important;
+  /* padding-right: 1rem!important;
+  border-left: solid 1px white; */
+
+}
+
+.navbar-right {
+  margin-left: auto;
+  text-align: right;
+  flex-direction: row-reverse!important;
+}
+
+.vertical_separator {
+  margin: auto 0;
+  padding: 0 1rem;
 }
 
 /* ===== homepage ===== */
@@ -49,7 +63,7 @@ p.copyrights {
 }
 
 .carousel_wrapper {
-  width: 60%;
+  width: 50%;
   margin: auto;
 }
 
@@ -87,7 +101,7 @@ p.copyrights {
 .painting_frame.frame1 {
   border: solid 1rem black;
   border-image-source: url('../images/simple_wood1.jpg');
-  border-image-slice: 14;
+  border-image-slice: 20;
 }
 .painting_frame.frame2 {
   border: solid 1rem black;
@@ -124,9 +138,9 @@ p.copyrights {
 .paint_key {
   width: 50%;
   margin: auto;
-  padding-top: 0.3rem;
+  padding-top: 0.5rem;
   border-top: dashed #c26565 2px;
-  font-size: 80%;
+  font-size: 60%;
 }
 
 .painting_picture:hover {
@@ -162,6 +176,17 @@ p.copyrights {
   cursor: zoom-out;
 }
 
+
+/* ===== contact ===== */
+
+.contact_info {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+
+
 /* FOR MOBILE */
 @media only screen and (max-width: 800px) {
 
@@ -179,6 +204,10 @@ p.copyrights {
   .expandModal > img.painting_picture {
     width: 90%!important;
     height: auto!important;
+  }
+
+  .navbar-right {
+
   }
 
 }
