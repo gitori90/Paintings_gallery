@@ -183,6 +183,7 @@ p.copyrights {
   width: 90%;
   text-align: center;
   margin: auto;
+  word-wrap: break-word;
 }
 
 
@@ -206,11 +207,5 @@ p.copyrights {
     height: auto!important;
   }
 
-  .contact_info > .welcome_title {
-    max-width: 80%!important;
-  }
-  .navbar-right {
-
-  }
 
 }
