@@ -206,8 +206,8 @@ p.copyrights {
     height: auto!important;
   }
 
-  .contact_info {
-    width: 80%!important;
+  .contact_info > .welcome_title {
+    max-width: 80%!important;
   }
   .navbar-right {
 
