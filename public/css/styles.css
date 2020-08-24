@@ -181,7 +181,7 @@ nav.navbar {
 .expandModal {
   position: fixed;
   border: none!important;
-  z-index: 5;
+  z-index: 200;
   width: 300%;
   height: 300%;
   left: 0;
