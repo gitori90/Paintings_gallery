@@ -2,14 +2,10 @@ body {
   background-color: #d9c6a5!important;
   background-image: url("https://www.transparenttextures.com/patterns/fake-luxury.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* padding-top: 4rem; */
 }
 
-nav.navbar {
-  background-color: #c26565;
-  color: white;
-  font-size: 2rem;
-  border-bottom: solid 0.5rem #f7e7bd;
-}
+
 
 h1 {
   padding: 2rem;
@@ -34,12 +30,23 @@ p.copyrights {
   text-align: center;
 }
 
+/* ===== navbar ===== */
+
+nav.navbar {
+  background-color: #c26565;
+  color: white;
+  font-size: 2rem;
+  border-bottom: solid 0.5rem #f7e7bd;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
 .navbar-nav > a.nav-link {
   color: white!important;
   padding-left: 2rem!important;
   /* padding-right: 1rem!important;
   border-left: solid 1px white; */
-
 }
 
 .navbar-right {
@@ -51,6 +58,35 @@ p.copyrights {
 .vertical_separator {
   margin: auto 0;
   padding: 0 1rem;
+}
+
+/* nav.nav_disappear {
+  display: none!important;
+
+} */
+
+#underNav {
+  padding-bottom: 8rem;
+}
+
+.arrow_up {
+  position: fixed;
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  border: solid 2px white;
+  border-radius: 100%;
+  display: none;
+  opacity: 0.5;
+  z-index: 200;
+  margin: 5px;
+}
+.arrow_up:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.arrow_up .fas {
+  color: white;
 }
 
 /* ===== homepage ===== */
