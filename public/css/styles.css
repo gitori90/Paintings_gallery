@@ -45,8 +45,6 @@ nav.navbar {
 .navbar-nav > a.nav-link {
   color: white!important;
   padding-left: 2rem!important;
-  /* padding-right: 1rem!important;
-  border-left: solid 1px white; */
 }
 
 .navbar-right {
@@ -59,11 +57,6 @@ nav.navbar {
   margin: auto 0;
   padding: 0 1rem;
 }
-
-/* nav.nav_disappear {
-  display: none!important;
-
-} */
 
 #underNav {
   padding-bottom: 8rem;
@@ -81,12 +74,13 @@ nav.navbar {
   margin: 5px;
 }
 .arrow_up:hover {
-  cursor: pointer;
   opacity: 1;
 }
-
 .arrow_up .fas {
   color: white;
+}
+.arrow_up .fas:hover {
+  cursor: pointer;
 }
 
 /* ===== homepage ===== */
