@@ -226,7 +226,7 @@ nav.navbar {
   }
 
   .welcome_title {
-    font-size: 150%;
+    font-size: 140%;
   }
 
   #paintings_display {
@@ -235,5 +235,9 @@ nav.navbar {
   .expandModal > img.painting_picture {
     width: 90%!important;
     height: auto!important;
+  }
+
+  .paint_key {
+    font-size: 80%;
   }
 }
