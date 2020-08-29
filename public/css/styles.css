@@ -226,7 +226,7 @@ nav.navbar {
   }
 
   .welcome_title {
-    font-size: 250%;
+    font-size: 150%;
   }
 
   #paintings_display {
@@ -236,6 +236,4 @@ nav.navbar {
     width: 90%!important;
     height: auto!important;
   }
-
-
 }
